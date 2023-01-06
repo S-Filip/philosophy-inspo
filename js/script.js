@@ -1,11 +1,13 @@
+// Initializing DOM elements
 const quoteContainer = document.getElementById("quote-container");
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
 
-let intervalId; // Declare a global variable to store the interval id
-let intervalAmount = 20000; // Added interval variable for easier use
+// Declaring global interval ID and value
+let intervalId;
+let intervalAmount = 20000;
 
 // Get a random quote from the API
 async function getQuote() {
@@ -46,15 +48,22 @@ twitterBtn.addEventListener("click", tweetQuote);
 // On page load, get a new quote
 newQuote();
 
-// Light/Dark mode switch
+// Mode button switch
 const toggleModeButton = document.getElementById("toggle-mode");
+const bodyElement = document.querySelector("body");
 const linkElement = document.querySelector('link[rel="stylesheet"]');
 
-// When the toggle mode button is clicked, change the href of the link element
-toggleModeButton.addEventListener("click", () => {
-  if (linkElement.getAttribute("href") === "../styles/light-mode.css") {
+function toggleMode() {
+  if (bodyElement.classList.contains("light-mode")) {
+    bodyElement.classList.replace("light-mode", "dark-mode");
     linkElement.setAttribute("href", "../styles/dark-mode.css");
+    toggleModeButton.innerHTML = "Light Mode";
   } else {
+    bodyElement.classList.replace("dark-mode", "light-mode");
     linkElement.setAttribute("href", "../styles/light-mode.css");
+    toggleModeButton.innerHTML = "Dark Mode";
   }
-});
+}
+
+// When the toggle mode button is clicked, change the mode
+toggleModeButton.addEventListener("click", toggleMode);
