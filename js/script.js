@@ -35,3 +35,16 @@ twitterBtn.addEventListener("click", tweetQuote);
 
 // On page load, get a new quote
 newQuote();
+
+// Light/Dark mode switch
+const toggleModeButton = document.getElementById("toggle-mode");
+const linkElement = document.querySelector('link[rel="stylesheet"]');
+
+// When the toggle mode button is clicked, change the href of the link element
+toggleModeButton.addEventListener("click", () => {
+  if (linkElement.getAttribute("href") === "../styles/light-mode.css") {
+    linkElement.setAttribute("href", "../styles/dark-mode.css");
+  } else {
+    linkElement.setAttribute("href", "../styles/light-mode.css");
+  }
+});
