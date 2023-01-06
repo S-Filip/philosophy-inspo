@@ -5,6 +5,7 @@ const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
 
 let intervalId; // Declare a global variable to store the interval id
+let intervalAmount = 20000; // Added interval variable for easier use
 
 // Get a random quote from the API
 async function getQuote() {
@@ -32,13 +33,13 @@ function tweetQuote() {
 }
 
 // Set an interval to call the newQuote function every 10 seconds
-intervalId = setInterval(newQuote, 10000);
+intervalId = setInterval(newQuote, intervalAmount);
 
 // Event listeners
 newQuoteBtn.addEventListener("click", () => {
   newQuote();
   clearInterval(intervalId); // Clear the interval when the button is clicked
-  intervalId = setInterval(newQuote, 10000); // Set the interval again
+  intervalId = setInterval(newQuote, intervalAmount); // Set the interval again
 });
 twitterBtn.addEventListener("click", tweetQuote);
 
