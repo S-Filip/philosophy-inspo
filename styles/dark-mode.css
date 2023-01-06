@@ -59,3 +59,9 @@ button:hover {
 button:active {
   background: #222;
 }
+
+#description {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}

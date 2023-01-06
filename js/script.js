@@ -4,6 +4,8 @@ const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
 
+let intervalId; // Declare a global variable to store the interval id
+
 // Get a random quote from the API
 async function getQuote() {
   const response = await fetch("https://stoicquotesapi.com/v1/api/quotes/random");
@@ -29,8 +31,15 @@ function tweetQuote() {
   window.open(twitterUrl, "_blank");
 }
 
+// Set an interval to call the newQuote function every 10 seconds
+intervalId = setInterval(newQuote, 10000);
+
 // Event listeners
-newQuoteBtn.addEventListener("click", newQuote);
+newQuoteBtn.addEventListener("click", () => {
+  newQuote();
+  clearInterval(intervalId); // Clear the interval when the button is clicked
+  intervalId = setInterval(newQuote, 10000); // Set the interval again
+});
 twitterBtn.addEventListener("click", tweetQuote);
 
 // On page load, get a new quote
