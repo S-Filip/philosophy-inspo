@@ -1,6 +1,8 @@
 const toggleModeButton = document.getElementById("toggle-mode");
 const bodyElement = document.querySelector("body");
 const linkElement = document.querySelector('link[rel="stylesheet"]');
+const navbarElement = document.getElementById("navbox");
+const footerElement = document.getElementById("footbox");
 
 // Check for saved mode in localStorage and apply it on page load
 const currentMode = localStorage.getItem("mode");
@@ -20,6 +22,9 @@ if (currentMode === "dark") {
 }
 
 function toggleMode() {
+  bodyElement.style.transitionDuration = "0.5s";
+  navbarElement.style.transitionDuration = "0.5s";
+  footerElement.style.transitionDuration = "0.5s";
   if (bodyElement.classList.contains("light-mode")) {
     bodyElement.classList.replace("light-mode", "dark-mode");
     linkElement.setAttribute("href", "../styles/dark-mode.css");
