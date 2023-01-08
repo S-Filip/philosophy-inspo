@@ -6,7 +6,9 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #fafafa;
+  background: #fff;
+  color: #333;
+  transition: background-color 0.5s ease;
 }
 
 #quote-container {
@@ -14,11 +16,12 @@ body {
   max-width: 90%;
   margin: 0 auto;
   text-align: center;
-  color: #666;
+  color: #333;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  transition: background-color 0.5s ease;
 }
 
 #quote {
@@ -71,12 +74,13 @@ button:active {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fafafa;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease;
 }
 
 .navbar a {
@@ -95,7 +99,7 @@ button:active {
 }
 
 footer {
-  background-color: #666;
+  background-color: #333;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -103,6 +107,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  transition: background-color 0.5s ease;
 }
 
 footer p {

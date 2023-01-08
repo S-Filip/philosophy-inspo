@@ -8,6 +8,7 @@ body {
   min-height: 100vh;
   background: #333;
   color: #fff;
+  transition: background-color 0.5s ease;
 }
 
 #quote-container {
@@ -20,6 +21,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  transition: background-color 0.5s ease;
 }
 
 #quote {
@@ -78,10 +80,11 @@ button:active {
   justify-content: space-evenly;
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease;
 }
 
 .navbar a {
-  color: #fafafa;
+  color: #fff;
   text-decoration: none;
   font-size: 1em;
 }
@@ -96,7 +99,7 @@ button:active {
 }
 
 footer {
-  background-color: #666;
+  background-color: #444;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -104,6 +107,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  transition: background-color 0.5s ease;
 }
 
 footer p {
