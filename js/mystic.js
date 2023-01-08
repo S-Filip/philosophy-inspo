@@ -7,7 +7,7 @@ const newQuoteBtn = document.getElementById("new-quote");
 
 // Declaring global interval ID and value
 let intervalId;
-let intervalAmount = 20000;
+let intervalAmount = 30000;
 
 // Parse the API response to extract the quotes and their corresponding authors as an array of objects
 function parseResponse(response) {

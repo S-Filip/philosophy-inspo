@@ -7,7 +7,7 @@ const newQuoteBtn = document.getElementById("new-quote");
 
 // Declaring global interval ID and value
 let intervalId;
-let intervalAmount = 20000;
+let intervalAmount = 30000;
 
 // Get a random quote from the API
 async function getQuote() {

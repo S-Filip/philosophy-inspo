@@ -1,1 +1,1 @@
-%~dp0\pages\stoicism.html
+%~dp0\pages\classicalgreek.html
