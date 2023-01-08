@@ -47,22 +47,3 @@ twitterBtn.addEventListener("click", tweetQuote);
 
 // On page load, get a new quote
 newQuote();
-
-// Mode button switch and replace
-const toggleModeButton = document.getElementById("toggle-mode");
-const bodyElement = document.querySelector("body");
-const linkElement = document.querySelector('link[rel="stylesheet"]');
-
-function toggleMode() {
-  if (bodyElement.classList.contains("light-mode")) {
-    bodyElement.classList.replace("light-mode", "dark-mode");
-    linkElement.setAttribute("href", "../styles/dark-mode.css");
-    toggleModeButton.innerHTML = "Light Mode";
-  } else {
-    bodyElement.classList.replace("dark-mode", "light-mode");
-    linkElement.setAttribute("href", "../styles/light-mode.css");
-    toggleModeButton.innerHTML = "Dark Mode";
-  }
-}
-
-toggleModeButton.addEventListener("click", toggleMode);
