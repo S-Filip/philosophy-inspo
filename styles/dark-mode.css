@@ -91,5 +91,6 @@ button:active {
   color: #666;
 }
 
-.selected {
+.navbar a.selected {
+  border-bottom: 2px solid #eee;
 }
