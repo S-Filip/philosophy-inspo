@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stoic Quote Generator</title>
+    <link rel="stylesheet" href="../styles/light-mode.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="light-mode">
+    <div class="navbar">
+      <a href="stoicism.html">Stoicism</a>
+      <a href="mysticism.html">Mysticism</a>
+      <a href="rationalism.html">Rationalism</a>
+    </div>
+    <div id="quote-container">
+      <div id="quote">"The obstacle is the way."</div>
+      <div id="author">Marcus Aurelius</div>
+      <div id="description">A new quote will be generated every twenty seconds.<br />Clicking "New Quote" resets the time interval.<br /></div>
+      <div id="buttons">
+        <button id="new-quote">New Quote</button>
+        <button id="toggle-mode">Dark Mode</button>
+        <button id="twitter">Tweet</button>
+      </div>
+    </div>
+    <script src="../js/stoic.js"></script>
+  </body>
+</html>
