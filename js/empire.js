@@ -13,6 +13,7 @@ let intervalAmount = 30000;
 function parseResponse(response) {
   const quotes = [];
   for (const [index, quoteData] of response.entries()) {
+    // Fixing API typo in https://philosophy-quotes-api.glitch.me/quotes/philosophy/Empiricism
     if (index !== "0" && quoteData.quote !== "HE who says there is no such thing as an honest man, you may be sure is himself a knave.") {
       quotes.push({
         source: quoteData.source,
