@@ -90,3 +90,6 @@ button:active {
 .navbar a:hover {
   color: #666;
 }
+
+.selected {
+}
