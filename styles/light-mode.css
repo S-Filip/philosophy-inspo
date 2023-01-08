@@ -83,11 +83,11 @@ button:active {
   color: #333;
   text-decoration: none;
   font-size: 1em;
-  transition: color 0.2s;
 }
 
 .navbar a:hover {
   color: #666;
+  transition: color 0.2s;
 }
 
 .navbar a.selected {
