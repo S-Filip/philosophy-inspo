@@ -1,1 +1,1 @@
-%~dp0\pages\quotes.html
+%~dp0\pages\stoicism.html
