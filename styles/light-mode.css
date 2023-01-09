@@ -111,7 +111,7 @@ footer p {
   padding: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   #quote-container {
     width: 90%;
   }
@@ -165,7 +165,7 @@ footer p {
   }
 
   footer p {
-    margin-left: 5px;
+    margin-left: 15px;
   }
 
   body {
