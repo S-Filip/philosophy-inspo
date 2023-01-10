@@ -25,16 +25,16 @@ function toggleMode() {
   bodyElement.style.transitionDuration = "0.5s";
   navbarElement.style.transitionDuration = "0.5s";
   footerElement.style.transitionDuration = "0.5s";
-  if (bodyElement.classList.contains("light-mode")) {
-    bodyElement.classList.replace("light-mode", "dark-mode");
-    linkElement.setAttribute("href", "../styles/dark-mode.css");
-    toggleModeButton.innerHTML = "Light Mode";
-    localStorage.setItem("mode", "dark"); // Set mode to dark in local storage
-  } else {
-    bodyElement.classList.replace("dark-mode", "light-mode");
+  bodyElement.classList.toggle("dark-mode");
+  bodyElement.classList.toggle("light-mode");
+  if (linkElement.getAttribute("href") === "../styles/dark-mode.css") {
     linkElement.setAttribute("href", "../styles/light-mode.css");
     toggleModeButton.innerHTML = "Dark Mode";
-    localStorage.setItem("mode", "light"); // Set mode to light in local storage
+    localStorage.setItem("mode", "light");
+  } else {
+    linkElement.setAttribute("href", "../styles/dark-mode.css");
+    toggleModeButton.innerHTML = "Light Mode";
+    localStorage.setItem("mode", "dark");
   }
 }
 

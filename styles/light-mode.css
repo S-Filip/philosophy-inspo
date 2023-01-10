@@ -6,8 +6,8 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #333;
-  color: #fff;
+  background: #fff;
+  color: #333;
 }
 
 #quote-container {
@@ -15,8 +15,8 @@ body {
   max-width: 90%;
   margin: 0 auto;
   text-align: center;
-  color: #fff;
-  background: #444;
+  color: #333;
+  background: #fafafa;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -51,8 +51,8 @@ button {
   width: 8rem;
   padding: 10px 20px;
   border: none;
-  background: #fff;
-  color: #333;
+  background: #333;
+  color: #fff;
   font-size: 1em;
   cursor: pointer;
   transition: background 0.2s;
@@ -72,7 +72,7 @@ button:active {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #333;
+  background-color: #fafafa;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -81,7 +81,7 @@ button:active {
 }
 
 .navbar a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   font-size: 1em;
 }
@@ -92,11 +92,11 @@ button:active {
 }
 
 .navbar a.selected {
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #333;
 }
 
 footer {
-  background-color: #444;
+  background-color: #333;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
