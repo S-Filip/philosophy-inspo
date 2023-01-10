@@ -25,8 +25,10 @@ async function newQuote() {
   do {
     await getQuote();
   } while (quoteText.innerText === quoteData.quote);
-  quoteText.innerText = quoteData.quote;
-  authorText.innerText = quoteData.author;
+  if (quoteText.innerText !== quoteData.quote) {
+    quoteText.innerText = quoteData.quote;
+    authorText.innerText = quoteData.author;
+  }
 }
 
 // Tweet the quote

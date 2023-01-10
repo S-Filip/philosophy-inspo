@@ -41,8 +41,13 @@ async function getQuote() {
 // Function to display a new quote
 async function newQuote() {
   const quoteData = await getQuote();
-  quoteText.innerText = quoteData.quote;
-  authorText.innerText = quoteData.source;
+  do {
+    await getQuote();
+  } while (quoteText.innerText === quoteData.quote);
+  if (quoteText.innerText !== quoteData.quote) {
+    quoteText.innerText = quoteData.quote;
+    authorText.innerText = quoteData.source;
+  }
 }
 
 // Tweet the quote
