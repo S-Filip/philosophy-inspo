@@ -26,4 +26,66 @@ describe("Full test", () => {
     cy.get("a").should("have.class", "selected");
     cy.visit("https://philosophyinspo.000webhostapp.com/pages/stoicism.html");
   });
+  it("checks if the generate quote button works", () => {
+    cy.visit("https://philosophyinspo.000webhostapp.com/pages/classicalgreek.html");
+    cy.wait(2000);
+    cy.get("#quote").then(($div) => {
+      const initialText = $div.text();
+      cy.get("#new-quote").click();
+      cy.wait(2000);
+      cy.get("#quote").should(($div) => {
+        expect($div.text()).not.eq(initialText);
+      });
+    });
+    cy.visit("https://philosophyinspo.000webhostapp.com/pages/empiricism.html");
+    cy.wait(2000);
+    cy.get("#quote").then(($div) => {
+      const initialText = $div.text();
+      cy.get("#new-quote").click();
+      cy.wait(2000);
+      cy.get("#quote").should(($div) => {
+        expect($div.text()).not.eq(initialText);
+      });
+    });
+    cy.visit("https://philosophyinspo.000webhostapp.com/pages/existentialism.html");
+    cy.wait(2000);
+    cy.get("#quote").then(($div) => {
+      const initialText = $div.text();
+      cy.get("#new-quote").click();
+      cy.wait(2000);
+      cy.get("#quote").should(($div) => {
+        expect($div.text()).not.eq(initialText);
+      });
+    });
+    cy.visit("https://philosophyinspo.000webhostapp.com/pages/mysticism.html");
+    cy.wait(2000);
+    cy.get("#quote").then(($div) => {
+      const initialText = $div.text();
+      cy.get("#new-quote").click();
+      cy.wait(2000);
+      cy.get("#quote").should(($div) => {
+        expect($div.text()).not.eq(initialText);
+      });
+    });
+    cy.visit("https://philosophyinspo.000webhostapp.com/pages/rationalism.html");
+    cy.wait(2000);
+    cy.get("#quote").then(($div) => {
+      const initialText = $div.text();
+      cy.get("#new-quote").click();
+      cy.wait(2000);
+      cy.get("#quote").should(($div) => {
+        expect($div.text()).not.eq(initialText);
+      });
+    });
+    cy.visit("https://philosophyinspo.000webhostapp.com/pages/stoicism.html");
+    cy.wait(2000);
+    cy.get("#quote").then(($div) => {
+      const initialText = $div.text();
+      cy.get("#new-quote").click();
+      cy.wait(2000);
+      cy.get("#quote").should(($div) => {
+        expect($div.text()).not.eq(initialText);
+      });
+    });
+  });
 });
