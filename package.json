@@ -1,0 +1,22 @@
+{
+  "name": "philosophy-inspo",
+  "version": "1.0.0",
+  "description": "Your favorite philosophers and their wisdom. 📖\\\r Quickly generate quotes and post them on Twitter! 💬\\\r Sleek and monochrome, minimalistic design. ✨\\\r \\\r @S-Filip 👋",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-Filip/philosophy-inspo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S-Filip/philosophy-inspo/issues"
+  },
+  "homepage": "https://github.com/S-Filip/philosophy-inspo#readme",
+  "dependencies": {
+    "cypress": "^12.3.0"
+  }
+}
