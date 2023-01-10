@@ -1,1 +1,1 @@
-%~dp0\pages\classicalgreek.html
+%~dp0\index.html
